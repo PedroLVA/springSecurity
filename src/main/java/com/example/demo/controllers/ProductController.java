@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.domain.product.Product;
-import com.example.demo.domain.product.ProductRepository;
+import com.example.demo.repositories.ProductRepository;
 import com.example.demo.domain.product.RequestProduct;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
