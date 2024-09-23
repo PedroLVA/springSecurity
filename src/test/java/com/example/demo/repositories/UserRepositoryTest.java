@@ -28,7 +28,7 @@ class UserRepositoryTest {
 
     @Test
     @DisplayName("Should get user from database, sucessfully")
-    void findByLoginCase1() {
+    void UserRepository_findByLogin_ReturnUserWithSpecficLogin() {
         String login = "pedro";
         RegisterDTO data = new RegisterDTO(login,"123", UserRole.USER);
         this.createUser(data);
@@ -40,7 +40,7 @@ class UserRepositoryTest {
 
     @Test
     @DisplayName("Should not get user from database when user doesn't exist")
-    void findByLoginCase2() {
+    void UserRepository_findByLogin_DontReturnAnyUsers() {
         String login = "pedro";
 
         UserDetails result = this.repository.findByLogin(login);
