@@ -27,9 +27,9 @@ class UserRepositoryTest {
     EntityManager entityManager;
 
     @Test
-    @DisplayName("Should get user from database, sucessfully")
+
     void UserRepository_findByLogin_ReturnUserWithSpecficLogin() {
-        String login = "pedro";
+        String login = "Rapha";
         RegisterDTO data = new RegisterDTO(login,"123", UserRole.USER);
         this.createUser(data);
 
@@ -39,7 +39,7 @@ class UserRepositoryTest {
     }
 
     @Test
-    @DisplayName("Should not get user from database when user doesn't exist")
+
     void UserRepository_findByLogin_DontReturnAnyUsers() {
         String login = "pedro";
 
